@@ -6,7 +6,6 @@
 
 with meter_readings as
 (
-  -- This is a temporary table to hold the meter readings)
   select *,
     row_number() over(partition by meter, start_time_stamp) as rn
   from {{ source('ekm_data','ekm_meter_data') }}
