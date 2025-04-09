@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: ekm_data
+    schema: public
+    tables:
+      - name: ekm_meter_data

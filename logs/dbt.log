@@ -1,0 +1,72 @@
+[0m14:59:25.063010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10606e270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107503c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107503ed0>]}
+
+
+============================== 14:59:25.072876 | 07cb3753-8e3c-4525-b24b-78a003457f8b ==============================
+[0m14:59:25.072876 [info ] [MainThread]: Running with dbt=1.9.4
+[0m14:59:25.073784 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/Users/jerome-norbit/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init jaffle_shop', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:59:25.098392 [debug] [MainThread]: Starter project path: /Users/jerome-norbit/Documents/sandbox/vtec_dbt_test/venv_dbt/lib/python3.13/site-packages/dbt/include/starter_project
+[0m14:59:25.112771 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:59:25.113364 [info ] [MainThread]: Setting up your profile.
+[0m15:01:33.010572 [info ] [MainThread]: Profile jaffle_shop written to /Users/jerome-norbit/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:01:33.027719 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 128.07509, "process_in_blocks": "0", "process_kernel_time": 0.375809, "process_mem_max_rss": "93728768", "process_out_blocks": "0", "process_user_time": 1.680468}
+[0m15:01:33.031146 [debug] [MainThread]: Command `dbt init` succeeded at 15:01:33.029477 after 128.08 seconds
+[0m15:01:33.033618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075cad70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106feed50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107674270>]}
+[0m15:01:33.035843 [debug] [MainThread]: Flushing usage events
+[0m15:01:33.324835 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:04:55.632690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111896270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c17ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c17c50>]}
+
+
+============================== 15:04:55.639578 | b6f51f9c-dcfd-4f45-a250-a2d9cffd5a7c ==============================
+[0m15:04:55.639578 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:04:55.640239 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/jerome-norbit/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:04:55.667719 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:04:55.668414 [info ] [MainThread]: python version: 3.13.2
+[0m15:04:55.668832 [info ] [MainThread]: python path: /Users/jerome-norbit/Documents/sandbox/vtec_dbt_test/venv_dbt/bin/python3.13
+[0m15:04:55.669149 [info ] [MainThread]: os info: macOS-15.0.1-x86_64-i386-64bit-Mach-O
+[0m15:04:55.774055 [info ] [MainThread]: Using profiles dir at /Users/jerome-norbit/.dbt
+[0m15:04:55.774503 [info ] [MainThread]: Using profiles.yml file at /Users/jerome-norbit/.dbt/profiles.yml
+[0m15:04:55.774824 [info ] [MainThread]: Using dbt_project.yml file at /Users/jerome-norbit/Documents/sandbox/vtec_dbt_test/dbt_project.yml
+[0m15:04:55.775200 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:04:55.777198 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.22487842, "process_in_blocks": "0", "process_kernel_time": 0.34922, "process_mem_max_rss": "97280000", "process_out_blocks": "0", "process_user_time": 1.620924}
+[0m15:04:55.777729 [debug] [MainThread]: Command `dbt debug` failed at 15:04:55.777607 after 0.23 seconds
+[0m15:04:55.778108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ce3950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ddd130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d2d040>]}
+[0m15:04:55.778489 [debug] [MainThread]: Flushing usage events
+[0m15:04:56.001384 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:16:29.542083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111822270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112bcbed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112bcbc50>]}
+
+
+============================== 15:16:29.558790 | 04bf9003-3a51-4780-b3cf-c06ac7e86595 ==============================
+[0m15:16:29.558790 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:16:29.559566 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/jerome-norbit/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:16:29.582373 [info ] [MainThread]: dbt version: 1.9.4
+[0m15:16:29.582942 [info ] [MainThread]: python version: 3.13.2
+[0m15:16:29.583319 [info ] [MainThread]: python path: /Users/jerome-norbit/Documents/sandbox/vtec_dbt_test/venv_dbt/bin/python3.13
+[0m15:16:29.583654 [info ] [MainThread]: os info: macOS-15.0.1-x86_64-i386-64bit-Mach-O
+[0m15:16:29.663585 [info ] [MainThread]: Using profiles dir at /Users/jerome-norbit/.dbt
+[0m15:16:29.682786 [info ] [MainThread]: Using profiles.yml file at /Users/jerome-norbit/.dbt/profiles.yml
+[0m15:16:29.683917 [info ] [MainThread]: Using dbt_project.yml file at /Users/jerome-norbit/Documents/sandbox/vtec_dbt_test/dbt_project.yml
+[0m15:16:29.684885 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m15:16:29.687229 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.22753713, "process_in_blocks": "0", "process_kernel_time": 0.309223, "process_mem_max_rss": "97005568", "process_out_blocks": "0", "process_user_time": 1.587691}
+[0m15:16:29.687997 [debug] [MainThread]: Command `dbt debug` failed at 15:16:29.687803 after 0.23 seconds
+[0m15:16:29.688504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c97950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d9d130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ce9040>]}
+[0m15:16:29.688964 [debug] [MainThread]: Flushing usage events
+[0m15:16:29.955204 [debug] [MainThread]: An error was encountered while trying to flush usage events
