@@ -3,4 +3,14 @@ version: 2
 seeds: 
   - name: meter_name_lookup
     description: >
-      EKM meter names
+      Lookup table mapping raw EKM meter addresses to reporting-friendly meter names.
+    columns:
+      - name: meter_address
+        description: Raw EKM meter identifier.
+        tests:
+          - not_null
+          - unique
+      - name: name
+        description: Reporting-friendly meter name.
+        tests:
+          - not_null

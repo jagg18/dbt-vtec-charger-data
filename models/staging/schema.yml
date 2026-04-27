@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_postgres__meter_readings
+    description: >
+      Cleaned EKM meter readings with standardized data types, invalid records removed,
+      and duplicate meter/start timestamp records deduplicated.
+    columns:
+      - name: meter_address
+        description: Raw meter identifier standardized as a string.
+        tests:
+          - not_null
+      - name: start_date_time
+        description: Reading interval start timestamp.
+        tests:
+          - not_null
+      - name: end_date_time
+        description: Reading interval end timestamp.
+        tests:
+          - not_null
+      - name: total_usage_kwh
+        description: Meter usage for the interval, standardized as a numeric kWh value.
+        tests:
+          - not_null
+      - name: dbt_cleaned_at
+        description: Timestamp from the dbt run that built the cleaned staging model.
+        tests:
+          - not_null
+
+  - name: stg_meter_readings_duplicates
+    description: >
+      Audit model containing duplicate meter readings excluded from the primary
+      staging model.
+    columns:
+      - name: meter_address
+        description: Raw meter identifier standardized as a string.
+      - name: start_date_time
+        description: Reading interval start timestamp used in duplicate detection.
+      - name: rn
+        description: Duplicate rank within each meter/start timestamp group.
+      - name: dbt_cleaned_at
+        description: Timestamp from the dbt run that built the duplicate audit model.

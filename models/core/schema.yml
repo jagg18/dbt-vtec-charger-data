@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: dim_meters
+    description: Dimension table that maps raw meter addresses to readable meter names.
+    columns:
+      - name: meter_address
+        description: Raw EKM meter identifier.
+        tests:
+          - not_null
+          - unique
+      - name: name
+        description: Reporting-friendly meter name.
+        tests:
+          - not_null
+
+  - name: fact_meter_readings
+    description: >
+      Fact table of validated EKM meter readings joined to the meter dimension for
+      downstream reporting and analysis.
+    columns:
+      - name: meter_address
+        description: Raw EKM meter identifier retained for lineage and relationship checks.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_meters')
+              field: meter_address
+      - name: meter_name
+        description: Reporting-friendly meter name from dim_meters.
+        tests:
+          - not_null
+      - name: meter_type
+        description: Source-system label for the meter reading.
+        tests:
+          - not_null
+      - name: start_date_time
+        description: Reading interval start timestamp.
+        tests:
+          - not_null
+      - name: end_date_time
+        description: Reading interval end timestamp.
+        tests:
+          - not_null
+      - name: total_usage_kwh
+        description: Usage for the reading interval in kWh.
+        tests:
+          - not_null
+      - name: dbt_cleaned_at
+        description: Timestamp from the dbt run that built the cleaned staging model.
+        tests:
+          - not_null
+      - name: dbt_transformed_at
+        description: Timestamp from the dbt run that built the reporting fact table.
+        tests:
+          - not_null

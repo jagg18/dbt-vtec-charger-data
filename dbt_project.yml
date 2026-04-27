@@ -36,3 +36,11 @@ models:
         materialized: view
     core:
         materialized: table
+
+seeds:
+  vtec_dbt_test:
+    meter_name_lookup:
+      # Preserve leading zeroes in raw meter identifiers when loading the seed.
+      +column_types:
+        meter_address: varchar(20)
+        name: varchar(100)
